@@ -1,10 +1,14 @@
 const timer = document.getElementById("timer");
-let calcTimer = setInterval(() => {
-    timer.textContent = Number(timer.textContent) - 1;
-    
-    if (timer.textContent == 0 ) {
-        alert("Вы победили в конкурсе!!!")
-    } else if (timer.textContent <= 0) {
-        clearInterval(calcTimer)
+let calcTimer = () => {
+    if (timer.textContent >= 0) {
+        timer.textContent = Number(timer.textContent) - 1;
     }
-}, 1000)
+    if (timer.textContent == 0) {
+        setTimeout(() => {
+            alert("Вы победили в конкурсе")
+        })
+    }
+}
+
+let interval = setInterval(calcTimer, 1000) 
+
