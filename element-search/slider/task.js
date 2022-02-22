@@ -1,3 +1,4 @@
+// TASK 3 ______________________________________________________________________
 let prevBtn = document.querySelector(".slider__arrow_prev");
 let nextBtn = document.querySelector(".slider__arrow_next");
 let imgList = Array.from(document.querySelectorAll(".slider__item"));
