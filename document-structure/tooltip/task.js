@@ -1,7 +1,7 @@
 const toolTip = Array.from(document.querySelectorAll(".has-tooltip"))
 
 function showToolTip (element) {
-    element.insertAdjacentHTL("beforeend", '<div class="tooltip"></div>');
+    element.insertAdjacentHTML("beforeend", '<div class="tooltip"></div>');
     element.querySelector(".tooltip").innerHTML = element.title;
     let coord = element.getBoundingClientRect();
     element.querySelector(".tooltip").style.cssText = "position: absolute;"
@@ -28,3 +28,4 @@ toolTip.forEach((element, index) => element.onclick = () => {
     deleteClass(element, index)
     event.preventDefault()
 })
+
